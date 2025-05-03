@@ -3,19 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reclaim Your Data</title>
+    <title>Protect Your Data</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Reclaim Your Data</h1>
-    </header>
-    <main>
-        <p>Your journey to take control of your data starts here.</p>
-    </main>
-    <footer>
-        <p>&copy; 2025 Reclaim Your Data. All rights reserved.</p>
-    </footer>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-title">Protect<br>Your<br>Data</div>
+        </div>
+        <div class="main-content">
+            <div class="language-selector">
+                <button class="language-tab">🇬🇧 English</button>
+                <button class="language-tab active">🇵🇱 Polish</button>
+                <button class="language-tab">🇩🇪 German</button>
+                <button class="language-tab">🇳🇱 Dutch</button>
+                <button class="language-tab">🇪🇸 Spanish</button>
+            </div>
+            <div class="text-card">Wniosek o usunięcie danych osobowych na podstawie art. 17 RODO
+
+Na podstawie art. 17 Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 (RODO), zwracam się z żądaniem niezwłocznego usunięcia wszelkich moich danych osobowych, które są przetwarzane przez Państwa podmiot.
+
+Proszę o potwierdzenie usunięcia danych oraz poinformowanie mnie o wszelkich działaniach podjętych w wyniku niniejszego wniosku, w tym o przekazaniu żądania usunięcia danych innym podmiotom, którym dane zostały ujawnione (zgodnie z art. 19 RODO).
+
+W przypadku odmowy realizacji mojego żądania proszę o szczegółowe uzasadnienie oraz informację o możliwości wniesienia skargi do organu nadzorczego – Prezesa Urzędu Ochrony Danych Osobowych.
+
+Z poważaniem,
+[Twoje imię i nazwisko]
+            </div>
+        </div>
+    </div>
+    <script>
+      const languageTexts = {
+        'English': `Request for erasure of personal data under Article 17 GDPR\n\nPursuant to Article 17 of Regulation (EU) 2016/679 (GDPR), I request the immediate erasure of all my personal data processed by your entity.\n\nPlease confirm the erasure of my data and inform me of any actions taken as a result of this request, including the transfer of the erasure request to other entities to whom the data has been disclosed (in accordance with Article 19 GDPR).\n\nIf my request is refused, please provide a detailed justification and information on the possibility of lodging a complaint with the supervisory authority – the President of the Personal Data Protection Office.\n\nSincerely,\n[Your name]`,
+        'Polish': `Wniosek o usunięcie danych osobowych na podstawie art. 17 RODO\n\nNa podstawie art. 17 Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 (RODO), zwracam się z żądaniem niezwłocznego usunięcia wszelkich moich danych osobowych, które są przetwarzane przez Państwa podmiot.\n\nProszę o potwierdzenie usunięcia danych oraz poinformowanie mnie o wszelkich działaniach podjętych w wyniku niniejszego wniosku, w tym o przekazaniu żądania usunięcia danych innym podmiotom, którym dane zostały ujawnione (zgodnie z art. 19 RODO).\n\nW przypadku odmowy realizacji mojego żądania proszę o szczegółowe uzasadnienie oraz informację o możliwości wniesienia skargi do organu nadzorczego – Prezesa Urzędu Ochrony Danych Osobowych.\n\nZ poważaniem,\n[Twoje imię i nazwisko]`,
+        'German': `Antrag auf Löschung personenbezogener Daten gemäß Art. 17 DSGVO\n\nHiermit beantrage ich gemäß Art. 17 der Verordnung (EU) 2016/679 (DSGVO) die unverzügliche Löschung aller meiner personenbezogenen Daten, die von Ihrem Unternehmen verarbeitet werden.\n\nBitte bestätigen Sie die Löschung meiner Daten und informieren Sie mich über alle im Zusammenhang mit diesem Antrag ergriffenen Maßnahmen, einschließlich der Weitergabe des Löschungsantrags an andere Stellen, denen die Daten offengelegt wurden (gemäß Art. 19 DSGVO).\n\nIm Falle einer Ablehnung meines Antrags bitte ich um eine ausführliche Begründung sowie Informationen über die Möglichkeit, eine Beschwerde bei der Aufsichtsbehörde einzureichen.\n\nMit freundlichen Grüßen,\n[Ihr Name]`,
+        'Dutch': `Verzoek tot verwijdering van persoonsgegevens op grond van art. 17 AVG\n\nOp grond van art. 17 van Verordening (EU) 2016/679 (AVG) verzoek ik om onmiddellijke verwijdering van al mijn persoonsgegevens die door uw organisatie worden verwerkt.\n\nGraag ontvang ik een bevestiging van de verwijdering en informatie over de genomen maatregelen naar aanleiding van dit verzoek, inclusief het doorgeven van het verwijderingsverzoek aan andere partijen aan wie de gegevens zijn verstrekt (conform art. 19 AVG).\n\nIndien mijn verzoek wordt geweigerd, ontvang ik graag een gedetailleerde motivering en informatie over de mogelijkheid om een klacht in te dienen bij de toezichthoudende autoriteit.\n\nMet vriendelijke groet,\n[Uw naam]`,
+        'Spanish': `Solicitud de supresión de datos personales en virtud del art. 17 RGPD\n\nDe conformidad con el art. 17 del Reglamento (UE) 2016/679 (RGPD), solicito la supresión inmediata de todos mis datos personales tratados por su entidad.\n\nPor favor, confirme la supresión de mis datos e infórmeme de todas las acciones tomadas como resultado de esta solicitud, incluida la transmisión de la solicitud de supresión a otros destinatarios a quienes se hayan comunicado los datos (de acuerdo con el art. 19 RGPD).\n\nEn caso de denegación de mi solicitud, le ruego que me proporcione una justificación detallada e información sobre la posibilidad de presentar una reclamación ante la autoridad de control.\n\nAtentamente,\n[Su nombre]`
+      };
+      const langButtons = document.querySelectorAll('.language-tab');
+      const textCard = document.querySelector('.text-card');
+      langButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          langButtons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          // Extract language from button text (after flag)
+          const lang = this.textContent.replace(/^[^A-Za-z]+\s*/, '');
+          textCard.textContent = languageTexts[lang] || '';
+        });
+      });
+    </script>
 </body>
 </html>
 

@@ -1,14 +1,132 @@
 /* center all content vertically */
 body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #222;
+  font-family: 'Roboto', Arial, sans-serif;
   display: flex;
-  flex-direction: column; /* Arrange items in a column */
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  overflow: hidden;
+  min-width: 800px;
+  min-height: 500px;
+}
+
+.sidebar {
+  background: #fff;
+  padding: 48px 32px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border-right: 2px solid #eee;
+}
+
+.sidebar-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  white-space: pre-line;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 32px;
+  background: #f7f7f7;
+}
+
+.language-selector {
+  display: flex;
+  gap: 0;
+  margin-bottom: 32px;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.language-tab {
+  background: #e5e5e5;
+  color: #444;
+  border: none;
+  outline: none;
+  padding: 16px 28px;
+  font-size: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.language-tab.active {
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  border-bottom: 3px solid #bdbdbd;
+}
+.language-tab:not(.active):hover {
+  background: #d1d1d1;
+}
+
+.text-card {
+  background: #eaeaea;
+  border-radius: 12px;
+  padding: 32px 28px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.05rem;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  width: 100%;
+  max-width: 540px;
+  min-height: 320px;
+  white-space: pre-line;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    min-width: 320px;
+    min-height: unset;
+  }
+  .sidebar {
+    border-right: none;
+    border-bottom: 2px solid #eee;
+    padding: 32px 16px;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-content {
+    padding: 24px 8px;
+  }
+  .text-card {
+    padding: 20px 8px;
+    max-width: 100%;
+  }
 }
 
 /* center the text */
 h1 {
   text-align: center;
 }
+
+/* center the button and make it really pretty */
+button {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
