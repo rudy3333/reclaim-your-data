@@ -1,0 +1,14 @@
+/* center all content vertically */
+body {
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+/* center the text */
+h1 {
+  text-align: center;
+}
